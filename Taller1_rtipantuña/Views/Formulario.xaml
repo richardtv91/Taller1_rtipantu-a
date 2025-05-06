@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taller1_rtipantuña.Views.Formulario"
+             Title="Formulario">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label 
+            Text="Formulario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="24" TextColor="blue"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Agrega tus elementos aquí -->
+            <Label Text="Identificacion" Grid.Row="0" Grid.Column="0" />
+            <Picker x:Name="identificacionPiker"  Grid.Row="0" Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>CI</x:String>
+                        <x:String>PASAPORTE</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry x:Name="txtIdentificacion" Keyboard="Numeric" Grid.Row="0" Grid.Column="2" Placeholder="identificacion"/>
+            <Label Text="Apellidos" Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="txtApellidoP" Grid.Row="1" Grid.Column="1"  Keyboard="Text" Placeholder="Paterno" />
+            <Entry x:Name="txtApellidoM" Grid.Row="1" Grid.Column="2" Keyboard="Text" Placeholder="Materno"/>
+            <Label Text="Nombres completos" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtNombres" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="nombres completos"/>
+            <Label Text="Teléfono personal" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtTelefono" Grid.Row="3" Grid.Column="1" Placeholder="Telefono" Keyboard="Numeric"/>
+            <Label Text="Correo personal" Grid.Row="4" Grid.Column="0"/>
+            <Entry x:Name="txtCorreo" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Keyboard="Email" Placeholder="Correo"/>
+            <Label Text="Confirmar correo" Grid.Row="5" Grid.Column="0"/>
+            <Entry x:Name="txtCorreoCo" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Keyboard="Email" Placeholder="Confirmar correo"/>
+            <Label Text="Carrera" Grid.Row="6" Grid.Column="0"/>
+            <Picker x:Name="carreraPiker"  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Administracion de empresas</x:String>
+                        <x:String>Sistemas</x:String>
+                        <x:String>Informatica</x:String>
+                        <x:String>Medicina</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Modalidad" Grid.Row="7" Grid.Column="0"/>
+            <Picker x:Name="modalidadPiker"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>En linea</x:String>
+                    <x:String>semipresencial</x:String>
+                        <x:String>presencial</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Campus" Grid.Row="8" Grid.Column="0"/>
+            <Picker x:Name="campusPiker"  Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                        <x:String>Matriz</x:String>
+                        <x:String>Norte</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Guardar" Grid.Row="9" 
+                    Clicked="btnGuardar_Clicked"
+                    Grid.Column="0" Grid.ColumnSpan="3"/>
+                
+
+
+                <!-- Continúa agregando elementos para las filas restantes -->
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>
