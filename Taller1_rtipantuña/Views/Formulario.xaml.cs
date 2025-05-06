@@ -34,7 +34,7 @@ public partial class Formulario : ContentPage
             String.IsNullOrEmpty(modalidad) ||
             String.IsNullOrEmpty(carrera)||string.IsNullOrEmpty(campus))
         {
-             DisplayAlert("Error", "Por favor,ingresar todos los datos.", "OK");
+             DisplayAlert("Error", "Por favor,ingresar todos los datos para continuar.", "OK");
             return;
         }
 
